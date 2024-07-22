@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+{% load static %}
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="">
+
+  <title> AEMS</title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+
+</head>
+
+<body class="sub_page">
+
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <span>
+              AEMS
+            </span>
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- contact section -->
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Get In Touch
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container contact-form">
+            <form method="post" action="{% url 'contact' %}">
+              {% csrf_token %}
+              <div class="form-row">
+                  <div class="col-lg-6">
+                      <div>
+                          <input type="text" name="name" placeholder="Your Name" required/>
+                      </div>
+                  </div>
+                  <div class="col-lg-6">
+                      <div>
+                          <input type="text" name="phone" placeholder="Phone Number" required/>
+                      </div>
+                  </div>
+              </div>
+              <div>
+                  <input type="email" name="email" placeholder="Email" required/>
+              </div>
+              <div>
+                  <input type="text" name="help_text" class="message-box" placeholder="Message" required/>
+              </div>
+              <div class="btn_box">
+                  <button type="submit">SEND</button>
+              </div>
+          </form>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.183468699294!2d76.71137060000002!3d12.303428299999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baf71db4c524607%3A0x7e780eb984e2af47!2sVidya%20Vikas%20Institute%20of%20Engineering%20%26%20Technology!5e0!3m2!1sen!2sin!4v1685084510533!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+  <!-- end contact section -->
+  <!-- jQery -->
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+  <!-- Google Map -->
+  </script>
+  <!-- End Google Map -->
+</body>
+</html>
